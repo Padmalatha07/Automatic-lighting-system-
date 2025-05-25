@@ -1,1 +1,27 @@
-# Automatic-lighting-system-
+const int ldrPin = A0;
+const int relayPin = 2; 
+const int buzzerPin = 3;
+const int threshold = 500;
+
+void setup() {
+pinMode(ldrPin, INPUT);
+pinMode(relayPin, OUTPUT);
+pinMode(buzzerPin, OUTPUT);
+digitalWrite(relayPin, LOW);
+digitalWrite(buzzerPin, LOW);
+}
+
+void loop(){
+int ldrValue = analogRead(ldrPin);
+if (ldrValue < threshold){
+digitalWrite(relayPin, HIGH);
+digitalWrite(buzzerPin, HIGH); 
+delay(3000); 
+digitalWrite(buzzerPin, LOW);
+} 
+else {
+digitalWrite(relay Pin, LOW);
+digitalWrite(buzzerPin, LOW); 
+}
+delay(100);
+}
