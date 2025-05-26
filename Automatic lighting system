@@ -7,8 +7,7 @@ void setup() {
 pinMode(ldrPin, INPUT);
 pinMode(relayPin, OUTPUT);
 pinMode(buzzerPin, OUTPUT);
-digitalWrite(relayPin, LOW);
-digitalWrite(buzzerPin, LOW);
+serial.begin(9600);
 }
 
 void loop(){
@@ -23,5 +22,5 @@ else {
 digitalWrite(relay Pin, LOW);
 digitalWrite(buzzerPin, LOW); 
 }
-delay(100);
+delay(500);
 }
